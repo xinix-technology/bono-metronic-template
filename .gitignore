@@ -1,0 +1,15 @@
+/cache
+/node_modules
+/vendor
+/www/data
+/www/storage
+/www/vendor
+/www/.DS_Store
+/autoload.json
+/composer.phar
+/*.sublime-*
+/.DS_Store
+/deploy
+/composerdev.json
+/NOTES.md
+**/.DS_Store

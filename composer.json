@@ -1,0 +1,25 @@
+{
+    "name": "wahyutaufik/bono-metronic-v7",
+    "description": "Bono framework with metronic v7 theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Wahyu Taufik",
+            "email": "wahyutaufik37@gmail.com"
+        }
+    ],
+    "require": {
+        "reekoheek/norm-fdb": "dev-master",
+        "xinix-technology/bono": "1.0.*",
+        "xinix-technology/norm": "1.8.*",
+        "xinix-technology/migrate": "~0.1.0",
+        "xinix-technology/bono-auth": "1.0.3",
+        "xinix-technology/bono-blade": "~1.0.0",
+        "xinix-technology/metronic-theme": "~7.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "App": "src/"
+        }
+    }
+}

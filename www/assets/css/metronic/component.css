@@ -1,0 +1,47 @@
+fileupload input[type="file"] {
+    display: none;
+}
+
+fileupload button span.spinner,
+thumbnail span.spinner {
+    display: none!important;
+}
+
+fileupload button span.spinner.show {
+    display: inline-block!important;
+}
+
+fileupload button span.label-spinner.hide {
+    visibility: hidden;
+}
+
+thumbnail span.spinner.show {
+    display: block!important;
+    text-align: center;
+    line-height: 1em;
+    font-size: 139px;
+}
+
+div#popupOverflow .input-search {
+    margin-bottom: 10px;
+}
+
+#popupContent .content.search-reference {
+    padding: 0!important;
+}
+
+#popupContent .content.search-reference .portlet.box {
+    margin: 0px!important;
+}
+
+#popupContent a.close {
+    background: transparent;
+}
+
+.searchreference button.btn-clear {
+    display: none!important;
+}
+
+.searchreference.selected button.btn-clear {
+    display: block!important;
+}
