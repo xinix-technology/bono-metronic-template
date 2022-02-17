@@ -372,8 +372,24 @@ contoh sederhananya adalah ketika kita ingin mengambil data dalam table employee
 $employees = \Norm::factory('employee')->findOne(array('company_id' => 3));
 ```
 ---
-untuk melihatnya dalam bentuk array saat men-debug bisa memanfaatkan fungsi built-in PHP yakni `toArray()`
-<br><br>
+### **# Criteria Operator**
+Dalam pengoperasian NORM sendiri ada beberapa Operator yang dapat menambah fungsionalitas guna mencari data di dalam database. Berikut merupakan Criteria Operator yang dapat dimanfaatkan dalam NORM field
+| Nama Operator    | Symbol Representative  | Deskripsi                                               |
+| :---          |   :----:   |:---                                                     |
+|field!like | LIKE | Mencari data dengan string tertentu |
+|field!lte | <= | Mencari data kurang dari sama dengan criteria tertentu |
+|field!lt | < | Mencari data kurang dari criteria tertentu |
+|field!gte | >= | Mencari data lebih dari sama dengan criteria tertentu |
+|field!gt | > | Mencari data lebih dari criteria tertentu |
+|field!ne | != | Mencari data yang tidak sama dengan criteria tertentu |
+|field!startwith | value% | Mencari data dengan awalan criteria tertentu |
+|field!endwith | %value | Mencari data dengan akhiran criteria tertentu |
+|field!in |  | Mencari value dari field sama dengan value dengan array tertentu |
+|field!nin |  | Mencari value dari field **tidak** sama dengan value dengan array tertentu |
+|field!isnull |  | Mencari value dari field yang sama dengan null |
+
+
+
 ## # Provider
 ---
 Provider merupakan sebuah bagian di Bono Metronic V7 yang berfungsi untuk mengembalikan sebuah data (response) dari database dalam bentuk JSON sehingga nantinya data berformat JSON tersebut dapat dikelola untuk kebutuhan tertentu, salah satunya untuk API.
