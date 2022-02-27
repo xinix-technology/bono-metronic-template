@@ -16,8 +16,8 @@ use App\Library\Resolver;
 
 return array(
     'application' => array(
-        'title' => 'Bono Metronic V7',
-        'subtitle' => 'Bono framework with metronic v7 theme'
+        'title' => 'Bono Metronic',
+        'subtitle' => 'Bono framework with metronic theme'
     ),
     'bono.timezone' => 'Asia/Jakarta',
     'bono.prettifyURL' => false,

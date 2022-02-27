@@ -22,11 +22,11 @@ class Password extends MetronicField
         return '
             <div class="row">
                 <div class="col-md-6">
-                    <input class="form-control" type="password" name="'.$this['name'].
+                    <input class="form-control form-control-solid" type="password" name="'.$this['name'].
                     '" value="" placeholder="Password" autocomplete="off" />
                 </div>
                 <div class="col-md-6">
-                    <input class="form-control" type="password" name="'.$this['name'].'_confirmation" value="" placeholder="Password confirmation" autocomplete="off" />
+                    <input class="form-control form-control-solid" type="password" name="'.$this['name'].'_confirmation" value="" placeholder="Password confirmation" autocomplete="off" />
                 </div>
             </div>
         ';

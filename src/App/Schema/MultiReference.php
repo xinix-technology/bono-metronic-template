@@ -20,7 +20,26 @@ class MultiReference extends ReferenceArray
                     $getLabel = $this['foreignLabel'];
                     $label = $getLabel($foreignEntry);
                 }
-                $html .= '<span class="label label-light-success label-inline font-weight-bold">'.$label."</span>\n";
+                $html .= '<span class="badge badge-light-success fw-bolder">'.$label."</span>\n";
+            }
+        }
+        $html .= "</span>\n";
+        return $html;
+    }
+
+    public function formatPlain($value, $entry = null)
+    {
+        $html = "<span>\n";
+        if (!empty($value)) {
+            foreach ($value as $key => $v) {
+                $foreignEntry = Norm::factory($this['foreign'])->findOne(array($this['foreignKey'] => $v));
+                if (is_string($this['foreignLabel'])) {
+                    $label = $foreignEntry[$this['foreignLabel']];
+                } elseif (is_callable($this['foreignLabel'])) {
+                    $getLabel = $this['foreignLabel'];
+                    $label = $getLabel($foreignEntry);
+                }
+                $html .= '<span class="badge badge-light-success fw-bolder">'.$label."</span>\n";
             }
         }
         $html .= "</span>\n";

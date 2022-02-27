@@ -9,9 +9,6 @@ use Bono\App;
 
 class SelectTwoReference extends Reference
 {
-
-
-    
     public function formatInput($value, $entry = null)
     {
 
@@ -33,7 +30,7 @@ class SelectTwoReference extends Reference
             'self' => $this,
             'value' => $value,
             'entry' => $entry,
-            'class' => implode($class,' '),
+            'class' => implode(' ', $class),
         ));
     }
 }

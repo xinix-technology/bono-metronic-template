@@ -32,7 +32,7 @@ class Thumbnail extends NormObject{
     {
         if (empty($value)) {
             return "<div class='symbol symbol-50 flex-shrink-0'>
-                <img class='img-fluid img-thumbnail' src='".URL::base('assets/media/users/blank.png')."'>
+                <img src='".URL::base('assets/metronic/media/avatars/blank.png')."'>
             </div>";
         }
 
@@ -42,12 +42,12 @@ class Thumbnail extends NormObject{
 
         if (count($value) < 1) {
             return "<div class='symbol symbol-50 flex-shrink-0'>
-                <img class='img-fluid img-thumbnail' src='".URL::base('assets/media/users/blank.png')."'>
+                <img src='".URL::base('assets/metronic/media/avatars/blank.png')."'>
             </div>";
         }
 
         return "<div class='symbol symbol-50 flex-shrink-0'>
-            <img class='img-fluid img-thumbnail' src='".URL::base($value['bucket'].'/'.$value['filename'])."' onerror='this.onerror=null;this.src=\"".URL::base('assets/media/users/blank.png')."\";'>
+            <img src='".URL::base($value['bucket'].'/'.$value['filename'])."' onerror='this.onerror=null;this.src=\"".URL::base('assets/metronic/media/avatars/blank.png')."\";'>
         </div>";
     }
 
@@ -62,9 +62,9 @@ class Thumbnail extends NormObject{
 
         if (count($value) <= 0) {
 
-            return "<img class='img-fluid img-thumbnail' src='".URL::base('assets/media/users/blank.png')."'>";
+            return "<div class=\"symbol symbol-100px symbol-lg-160px symbol-fixed position-relative\"><img src='".URL::base('assets/metronic/media/avatars/blank.png')."'></div>";
         }
 
-        return "<img class='img-fluid img-thumbnail' src='".URL::base($value['bucket'].'/'.$value['filename'])."' onerror='this.onerror=null;this.src=\"".URL::base('assets/media/users/blank.png')."\";'>";
+        return "<div class=\"symbol symbol-100px symbol-lg-160px symbol-fixed position-relative\"><img src='".URL::base($value['bucket'].'/'.$value['filename'])."' onerror='this.onerror=null;this.src=\"".URL::base('assets/metronic/media/avatars/blank.png')."\";'></div>";
     }
 }

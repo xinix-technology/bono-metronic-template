@@ -73,7 +73,6 @@ class SysparamReference extends Reference{
         ));
     }
 
-
     public function toJSON($value)
     {
         $foreignCollection = Norm::factory($this['foreign']);

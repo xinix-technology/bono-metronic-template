@@ -1,0 +1,34 @@
+.table tbody td,
+.table thead th {
+    vertical-align: inherit;
+}
+
+.alert,
+.alert-text {
+    margin-top: -67px;
+}
+
+.modal-body {
+    padding: 0;
+}
+.modal-body .kt-portlet {
+    margin-bottom: 0;
+}
+
+.modal-body .kt-portlet .kt-portlet__body,
+.modal-body .kt-portlet .kt-portlet__foot {
+    padding: 1.25rem;
+}
+
+
+.form-control .fileupload-filename {
+    vertical-align: bottom;
+    position: absolute;
+}
+
+
+/* end component file upload  */
+
+.select2-selection {
+    min-height: calc(1.5em + 1.3rem + 2px);
+}

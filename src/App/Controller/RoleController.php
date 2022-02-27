@@ -8,11 +8,70 @@ use Norm\Norm;
 class RoleController extends AppController
 {
 
+    public function mapRoute(){
+        parent::mapRoute();
+        $this->map('/:id/remove/:user_id', 'removeUserFromRole')->via('GET', 'POST');
+    }
+
+    public function search()
+    {
+        $this->data['previlege'] =  $this->generatePrevilegeIndex();
+        $criteria = $this->getCriteria();
+        $criteria['status'] = '1';
+        $entries = $this->collection->find($criteria)
+            ->match($this->getMatch())
+            ->sort($this->getSort())
+            ->skip($this->getSkip())
+            ->limit($this->getLimit());
+        
+        $arr = [];
+        foreach ($entries as $key => $entry) {
+            $arr[$key] = $entry->toArray();
+            $arr[$key]['permissions'] = $this->generatePrevilegeIndex($entry['$id']);
+            $arr[$key]['users'] = $this->generateUser($entry['$id'])->count();
+        }
+        $this->data['entries'] = $arr;
+    }
+
+    public function generatePrevilegeIndex($id = null)
+    {
+        $datarole = array();
+        
+        $previlegerole = \Norm::factory('RolePrevileges')->find(array('role' => $id));
+        foreach ($previlegerole as $key => $value) {
+            $role = \Norm::factory('Previleges')->findOne(['uri' => $value['rule']]);
+            $datarole[$key] = $value->toArray();
+            $datarole[$key]['permissions'] = $role->toArray();
+        }
+        return $datarole;
+    }
+
+    public function generateUser($id = null)
+    {
+
+        $userrole = \Norm::factory('UserRoles')->find(array('role_id' => $id));
+        
+        return $userrole;
+    }
 
 	public function create()
     {
         $this->data['previlege'] = $this->generatePrevilege();
         parent::create();
+    }
+
+    public function read($id)
+    {
+        parent::read($id);
+        $this->data['permissions'] = $this->generatePrevilegeIndex($id);
+
+        $users = [];
+        foreach ($this->generateUser($id) as $key => $value) {
+            $user = \Norm::factory('User')->findOne($value['user_id']);
+            $users[] = $user;
+        }
+        
+        $this->data['users'] = $users;
     }
 
 
@@ -22,9 +81,8 @@ class RoleController extends AppController
         $this->data['previlege'] =  $this->generatePrevilege($id);
     }
 
-    
-
-    public function generatePrevilege($id = null){
+    public function generatePrevilege($id = null)
+    {
 
         $previlege =  \Norm::factory('Previleges')->find()->sort(array('ordering' => 1));
         $prearray = array();
@@ -56,6 +114,13 @@ class RoleController extends AppController
 
         return  $prearray;
 
+    }
+
+    public function removeUserFromRole($id, $userId)
+    {
+        print_r($id);
+        print_r($userId);
+        exit;
     }
 
 }

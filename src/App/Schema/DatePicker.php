@@ -39,7 +39,7 @@ class DatePicker extends NormDate
 
     public function formatReadonly($value, $entry = null)
     {
-        return '<span class="field">'.($this->formatPlain($value, $entry) ?: '&nbsp;').'</span>';
+        return "<input class=\"form-control form-control-solid\" readonly=\"readonly\" value=\"".($this->formatPlain($value, $entry) ? : "&nbsp;")."\" />";
     }
 
 

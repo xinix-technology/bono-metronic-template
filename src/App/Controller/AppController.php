@@ -124,17 +124,83 @@ class AppController extends NormController
 
     public function search()
     {
+        $schemas = $this->collection->schema();
+        
         $criteria = $this->getCriteria();
+        $match = $this->getMatch();
         $sort = $this->getSort();
+        $skip = $this->getSkip();
+        $limit = $this->getLimit();
+        
         $criteria['status'] = '1';
+        
+        $format = $this->request->get('format') ? $this->request->get('format') : NULL;
+        
+        if (preg_match('/\/.*\.json/', $this->request->getPathInfo())) {
+            if($format == 'datatable') {
+                $limit = intval($criteria['length'] ? $criteria['length'] : $limit);
+                $skip = intval($criteria['start'] ? $criteria['start'] : $skip);
+                $search_params = $criteria['search'];
+                if ($search_params['value']) {
+                    $match = $search_params['value'];
+                }
 
+                $draw = $criteria['draw'];
+                if(isset($criteria['order'])) {
+                    foreach ($criteria['order'] as $value) {
+                        $sort = [$criteria['columns'][$value['column']]['data'] => $value['dir'] == 'asc' ? '1' : '-1'];
+                    }
+                }
+                
+                unset($criteria['search']);
+                unset($criteria['draw']);
+                unset($criteria['start']);
+                unset($criteria['length']);
+                unset($criteria['columns']);
+                unset($criteria['format']);
+                unset($criteria['_token']);
+                unset($criteria['_']);
+                unset($criteria['order']);
+            }
+        }
+
+        $data = [];
+
+        
         $entries = $this->collection->find($criteria)
-            ->match($this->getMatch())
+            ->match($match)
             ->sort($sort)
-            ->skip($this->getSkip())
-            ->limit($this->getLimit());
+            ->skip($skip)
+            ->limit($limit);
         
         $this->data['entries'] = $entries;
+        foreach ($entries as $key => $entry) {
+            $data[$key] = [];
+            foreach ($schemas as $name => $field) {
+                try { 
+                    $str = $entry->format($name);
+                    $data[$key]['$id'] = $entry->getId();
+                    if (!(strcmp( $str, strip_tags($str) ) == 0)) {
+                        $data[$key][$name] = $str;
+                    } else {
+                        $string = strip_tags($entry->format($name)); 
+                        $data[$key][$name] = substr($string, 0, 48);
+                    }
+                } catch(\Exception $e) {
+                    $data[$key][$name] = '-';
+                }
+            }
+        }
+
+        if (preg_match('/\/.*\.json/', $this->request->getPathInfo())) {
+            if($format == 'datatable') {
+                unset($this->data['entries']);
+                $this->data['data'] = $data;
+                $this->data['draw'] =  $draw;
+                $this->data['recordsFiltered'] =  $entries->count();
+                $this->data['recordsTotal'] =  $entries->count();
+            }
+        }
     }
 
     public function create()

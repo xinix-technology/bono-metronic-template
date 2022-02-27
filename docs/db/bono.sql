@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 01, 2021 at 02:07 AM
--- Server version: 10.5.8-MariaDB
--- PHP Version: 7.3.27
+-- Generation Time: Sep 02, 2021 at 02:53 AM
+-- Server version: 10.6.3-MariaDB
+-- PHP Version: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -42,70 +42,12 @@ CREATE TABLE `audit_trail` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `audit_trail`
 --
 
-INSERT INTO `audit_trail` (`id`, `user`, `uri`, `method`, `data`, `ip_address`, `user_agent`, `response`, `activity`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
-(1, NULL, '/official/bono-metronic/www', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:00', '2021-02-23 18:42:00'),
-(2, NULL, '/official/bono-metronic/www/index.php/login', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:02', '2021-02-23 18:42:02'),
-(3, NULL, '/official/bono-metronic/www/index.php/favicon.ico', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:02', '2021-02-23 18:42:02'),
-(4, NULL, '/official/bono-metronic/www/index.php/login', 'POST', '{\"username\":\"admin\"}', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:05', '2021-02-23 18:42:05'),
-(5, NULL, '/official/bono-metronic/www/index.php/favicon.ico', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:05', '2021-02-23 18:42:05'),
-(6, NULL, '/official/bono-metronic/www/index.php/login', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:39', '2021-02-23 18:42:39'),
-(7, NULL, '/official/bono-metronic/www/index.php/favicon.ico', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:40', '2021-02-23 18:42:40'),
-(8, NULL, '/official/bono-metronic/www/index.php/login', 'POST', '{\"username\":\"admin\"}', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:43', '2021-02-23 18:42:43'),
-(9, NULL, '/official/bono-metronic/www/index.php/favicon.ico', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:42:43', '2021-02-23 18:42:43'),
-(10, NULL, '/official/bono-metronic/www/index.php/login', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:43:43', '2021-02-23 18:43:43'),
-(11, NULL, '/official/bono-metronic/www/index.php/favicon.ico', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', NULL, NULL, '2021-02-23 18:43:43', '2021-02-23 18:43:43'),
-(12, NULL, '/official/bono-metronic/www/index.php/login', 'POST', '{\"username\":\"admin\"}', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:43:46', '2021-02-23 18:43:46'),
-(13, '1', '/official/bono-metronic/www', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:43:46', '2021-02-23 18:43:46'),
-(14, '1', '/official/bono-metronic/www/index.php/test', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:43:53', '2021-02-23 18:43:53'),
-(15, '1', '/official/bono-metronic/www/index.php/test/null/create', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:43:55', '2021-02-23 18:43:55'),
-(16, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:44:00', '2021-02-23 18:44:00'),
-(17, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:44:08', '2021-02-23 18:44:08'),
-(18, '1', '/official/bono-metronic/www/index.php/sysparam', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:45:00', '2021-02-23 18:45:00'),
-(19, '1', '/official/bono-metronic/www/index.php/test', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:45:04', '2021-02-23 18:45:04'),
-(20, '1', '/official/bono-metronic/www/index.php', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:45:24', '2021-02-23 18:45:24'),
-(21, '1', '/official/bono-metronic/www/index.php/test', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:45:42', '2021-02-23 18:45:42'),
-(22, '1', '/official/bono-metronic/www/index.php/user', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:45:43', '2021-02-23 18:45:43'),
-(23, '1', '/official/bono-metronic/www/index.php/user/null/create', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:45:55', '2021-02-23 18:45:55'),
-(24, '1', '/official/bono-metronic/www/index.php/user/null/create', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:54:29', '2021-02-23 18:54:29'),
-(25, '1', '/official/bono-metronic/www/index.php/role', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:54:31', '2021-02-23 18:54:31'),
-(26, '1', '/official/bono-metronic/www/index.php/previleges', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:54:32', '2021-02-23 18:54:32'),
-(27, '1', '/official/bono-metronic/www/index.php/sysparam', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:54:34', '2021-02-23 18:54:34'),
-(28, '1', '/official/bono-metronic/www/index.php/test', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:54:37', '2021-02-23 18:54:37'),
-(29, '1', '/official/bono-metronic/www/index.php/test/null/create', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 18:54:38', '2021-02-23 18:54:38'),
-(30, '1', '/official/bono-metronic/www/index.php', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:26:33', '2021-02-23 21:26:33'),
-(31, '1', '/official/bono-metronic/www/index.php/test', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:26:36', '2021-02-23 21:26:36'),
-(32, '1', '/official/bono-metronic/www/index.php/test/null/create', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:26:38', '2021-02-23 21:26:38'),
-(33, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:26:42', '2021-02-23 21:26:42'),
-(34, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:27:18', '2021-02-23 21:27:18'),
-(35, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:27:49', '2021-02-23 21:27:49'),
-(36, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:28:00', '2021-02-23 21:28:00'),
-(37, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:28:10', '2021-02-23 21:28:10'),
-(38, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 21:28:21', '2021-02-23 21:28:21'),
-(39, '1', '/official/bono-metronic/www/index.php/metronic/upload_file.json', 'POST', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 22:16:59', '2021-02-23 22:16:59'),
-(40, '1', '/official/bono-metronic/www/index.php/metronic/upload_file.json', 'POST', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 22:17:07', '2021-02-23 22:17:07'),
-(41, '1', '/official/bono-metronic/www/index.php/test/null/create', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 22:31:44', '2021-02-23 22:31:44'),
-(42, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-23 22:31:53', '2021-02-23 22:31:53'),
-(43, '1', '/official/bono-metronic/www/index.php/user.json', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-24 07:33:45', '2021-02-24 07:33:45'),
-(44, '1', '/official/bono-metronic/www/index.php/user', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:22', '2021-02-25 09:50:22'),
-(45, '1', '/official/bono-metronic/www/index.php/role', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:24', '2021-02-25 09:50:24'),
-(46, '1', '/official/bono-metronic/www/index.php/previleges', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:25', '2021-02-25 09:50:25'),
-(47, '1', '/official/bono-metronic/www/index.php/sysparam', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:26', '2021-02-25 09:50:26'),
-(48, '1', '/official/bono-metronic/www/index.php/previleges', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:27', '2021-02-25 09:50:27'),
-(49, '1', '/official/bono-metronic/www/index.php/role', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:30', '2021-02-25 09:50:30'),
-(50, '1', '/official/bono-metronic/www/index.php/user', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:31', '2021-02-25 09:50:31'),
-(51, '1', '/official/bono-metronic/www/index.php/test', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:32', '2021-02-25 09:50:32'),
-(52, '1', '/official/bono-metronic/www/index.php/test/1', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:50:33', '2021-02-25 09:50:33'),
-(53, '1', '/official/bono-metronic/www/index.php/test/1/update', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:51:00', '2021-02-25 09:51:00'),
-(54, '1', '/official/bono-metronic/www/index.php/test/1', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 09:51:05', '2021-02-25 09:51:05'),
-(55, '1', '/official/bono-metronic/www', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 17:31:20', '2021-02-25 17:31:20'),
-(56, '1', '/official/bono-metronic/www/index.php/user', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 17:31:24', '2021-02-25 17:31:24'),
-(57, '1', '/official/bono-metronic/www/index.php/user', 'GET', '[]', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.182 Safari/537.36', NULL, '', '1', '1', '2021-02-25 20:19:28', '2021-02-25 20:19:28');
 
 -- --------------------------------------------------------
 
@@ -125,14 +67,39 @@ CREATE TABLE `previleges` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `previleges`
 --
 
 INSERT INTO `previleges` (`id`, `module`, `submodule`, `ordering`, `action`, `uri`, `status`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
-(1, 'All', 'All', '1', 'All', '*', 1, '1', '1', '2021-02-23 09:39:25', '2021-02-23 09:39:25');
+(1, 'All', 'All', '1', 'Developer Controls', '*', 1, '1', '1', '2021-02-23 09:39:25', '2021-02-23 09:39:25'),
+(2, 'Dashboard', 'Dashboard', '1', 'View', '/', 1, '1', '1', '2021-08-30 14:03:58', '2021-08-30 14:03:58'),
+(3, 'User Management', 'User', '1', 'List', '/user', 1, '1', '1', '2021-08-30 14:04:23', '2021-08-31 19:22:58'),
+(4, 'User Management', 'User', '2', 'View', '/user/:id', 1, '1', '1', '2021-08-30 14:04:39', '2021-08-31 19:22:43'),
+(5, 'User Management', 'User', '4', 'Edit', '/user/:id/update', 1, '1', '1', '2021-08-31 18:11:58', '2021-08-31 19:22:22'),
+(6, 'User Management', 'User', '5', 'Destroy', '/user/:id/delete', 1, '1', '1', '2021-08-31 18:14:33', '2021-08-31 19:22:12'),
+(7, 'User Management', 'User', '6', 'Trash', '/user/:id/trash', 1, '1', '1', '2021-08-31 18:14:47', '2021-08-31 19:21:58'),
+(8, 'User Management', 'User', '3', 'Write', '/user/null/create', 1, '1', '1', '2021-08-31 19:23:29', '2021-08-31 19:23:29'),
+(9, 'Configuration', 'Sysparam', '1', 'List', '/sysparam', 1, '1', '1', '2021-08-31 19:27:17', '2021-08-31 19:27:17'),
+(10, 'Configuration', 'Sysparam', '2', 'View', '/sysparam/:id', 1, '1', '1', '2021-08-31 19:27:37', '2021-08-31 19:27:37'),
+(11, 'Configuration', 'Sysparam', '3', 'Write', '/sysparam/null/create', 1, '1', '1', '2021-08-31 19:27:58', '2021-08-31 19:27:58'),
+(12, 'Configuration', 'Sysparam', '4', 'Edit', '/sysparam/:id/update', 1, '1', '1', '2021-08-31 19:28:30', '2021-08-31 19:28:30'),
+(13, 'Configuration', 'Sysparam', '5', 'Destroy', '/sysparam/:id/delete', 1, '1', '1', '2021-08-31 19:28:39', '2021-08-31 19:28:39'),
+(14, 'Configuration', 'Sysparam', '5', 'Trash', '/sysparam/:id/trash', 1, '1', '1', '2021-08-31 19:28:46', '2021-08-31 19:28:46'),
+(15, 'Configuration', 'Permissions', '1', 'List', '/previleges', 1, '1', '1', '2021-08-31 19:29:48', '2021-08-31 19:29:48'),
+(16, 'Configuration', 'Permissions', '2', 'View', '/previleges/:id', 1, '1', '1', '2021-08-31 19:29:55', '2021-08-31 19:29:55'),
+(17, 'Configuration', 'Permissions', '3', 'Write', '/previleges/null/create', 1, '1', '1', '2021-08-31 19:30:05', '2021-08-31 19:30:05'),
+(18, 'Configuration', 'Permissions', '4', 'Edit', '/previleges/:id/update', 1, '1', '1', '2021-08-31 19:30:15', '2021-08-31 19:30:15'),
+(19, 'Configuration', 'Permissions', '5', 'Destroy', '/previleges/:id/delete', 1, '1', '1', '2021-08-31 19:30:21', '2021-08-31 19:30:21'),
+(20, 'Configuration', 'Permissions', '6', 'Trash', '/previleges/:id/trash', 1, '1', '1', '2021-08-31 19:30:28', '2021-08-31 19:30:28'),
+(21, 'Configuration', 'Roles', '1', 'List', '/role', 1, '1', '1', '2021-08-31 19:31:04', '2021-08-31 19:31:04'),
+(22, 'Configuration', 'Roles', '2', 'View', '/role/:id', 1, '1', '1', '2021-08-31 19:31:11', '2021-08-31 19:31:11'),
+(23, 'Configuration', 'Roles', '3', 'Write', '/role/null/create', 1, '1', '1', '2021-08-31 19:31:22', '2021-08-31 19:31:22'),
+(24, 'Configuration', 'Roles', '4', 'Edit', '/role/:id/update', 1, '1', '1', '2021-08-31 19:31:34', '2021-08-31 19:31:34'),
+(25, 'Configuration', 'Roles', '5', 'Destroy', '/role/:id/delete', 1, '1', '1', '2021-08-31 19:31:42', '2021-08-31 19:31:42'),
+(26, 'Configuration', 'Roles', '6', 'Trash', '/role/:id/trash', 1, '1', '1', '2021-08-31 19:31:53', '2021-08-31 19:31:53');
 
 -- --------------------------------------------------------
 
@@ -148,15 +115,16 @@ CREATE TABLE `role` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `role`
 --
 
 INSERT INTO `role` (`id`, `name`, `status`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
-(1, 'Admin', 1, '1', '1', '2021-02-23 09:38:49', '2021-02-23 09:40:31'),
-(2, 'User', 1, '1', '1', '2021-02-23 16:17:21', '2021-02-23 16:17:21');
+(1, 'Admin', 1, '1', '1', '2021-02-23 09:38:49', '2021-08-31 19:34:38'),
+(2, 'User', 1, '1', '1', '2021-02-23 16:17:21', '2021-08-31 19:40:55'),
+(3, 'Developer', 1, '1', '1', '2021-08-31 19:33:41', '2021-08-31 19:33:41');
 
 -- --------------------------------------------------------
 
@@ -174,15 +142,39 @@ CREATE TABLE `role_previleges` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `role_previleges`
 --
 
 INSERT INTO `role_previleges` (`id`, `role`, `type`, `rule`, `status`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
-(1, '1', 'uri', '*', 1, '1', '1', '2021-02-23 09:40:31', '2021-02-23 09:40:31'),
-(2, '2', 'uri', '*', NULL, '1', '1', '2021-02-23 16:17:22', '2021-02-23 16:17:22');
+(23, '3', 'uri', '*', NULL, '1', '1', '2021-08-31 19:33:41', '2021-08-31 19:33:41'),
+(24, '1', 'uri', '/', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(25, '1', 'uri', '/user', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(26, '1', 'uri', '/user/:id', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(27, '1', 'uri', '/user/null/create', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(28, '1', 'uri', '/user/:id/update', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(29, '1', 'uri', '/user/:id/trash', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(30, '1', 'uri', '/previleges', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(31, '1', 'uri', '/previleges/:id', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(32, '1', 'uri', '/previleges/null/create', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(33, '1', 'uri', '/previleges/:id/update', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(34, '1', 'uri', '/previleges/:id/trash', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(35, '1', 'uri', '/role', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(36, '1', 'uri', '/role/:id', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(37, '1', 'uri', '/role/null/create', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(38, '1', 'uri', '/role/:id/update', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(39, '1', 'uri', '/role/:id/trash', NULL, '1', '1', '2021-08-31 19:34:38', '2021-08-31 19:34:38'),
+(40, '2', 'uri', '/', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(41, '2', 'uri', '/user', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(42, '2', 'uri', '/user/:id', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(43, '2', 'uri', '/user/null/create', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(44, '2', 'uri', '/user/:id/update', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(45, '2', 'uri', '/sysparam', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(46, '2', 'uri', '/sysparam/:id', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(47, '2', 'uri', '/sysparam/null/create', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55'),
+(48, '2', 'uri', '/sysparam/:id/update', NULL, '1', '1', '2021-08-31 19:40:55', '2021-08-31 19:40:55');
 
 -- --------------------------------------------------------
 
@@ -202,7 +194,7 @@ CREATE TABLE `sysparam` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `sysparam`
@@ -242,14 +234,15 @@ CREATE TABLE `test` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `test`
 --
 
 INSERT INTO `test` (`id`, `photo`, `nama`, `alamat`, `ktp`, `file2`, `file`, `dropdown`, `select`, `role`, `role2`, `user`, `user1`, `testdate`, `testdate2`, `testdate3`, `testdate4`, `sysparam`, `status`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
-(1, '{\"name\":\"logo-gigant-store.png\",\"filename\":\"460ddc14357a1a310b3940aba1aca2b2.png\",\"bucket\":\"storage\",\"mime_type\":\"image\\/png\"}', 'Gigant', 'Jakarta', '12-3456-78_90.123', '{\"name\":\"Gmail - Terima Kasih! Pesanan (15863) diterima!.pdf\",\"filename\":\"e42eb84bffb2fed4d283f456c28e5246.pdf\",\"bucket\":\"data\",\"mime_type\":\"application\\/pdf\"}', '{\"name\":\"Gmail - Terima Kasih! Pesanan (15864) diterima!.pdf\",\"filename\":\"1abaec505eb51e822fab9b4cc21c2edb.pdf\",\"bucket\":\"storage1\",\"mime_type\":\"application\\/pdf\"}', 'a', 'b', '[\"1\"]', '[\"2\"]', '4', '3', '2021-02-24', '2021-02-24', '2021-02-24', '2021-02-24 07:57:00', '1', 1, '1', '1', '2021-02-24 07:57:55', '2021-02-24 07:57:55');
+(1, '{\"name\":\"aqua_aqua-botol-air-mineral--600-ml-_full02.jpeg\",\"filename\":\"1b9be0234b98c5337e71197cb8916038.jpeg\",\"bucket\":\"storage\",\"mime_type\":\"image\\/jpeg\"}', 'Gigant', 'Jakarta', '12-3456-78_90.123', '{\"name\":\"Gmail - Terima Kasih! Pesanan (15863) diterima!.pdf\",\"filename\":\"e42eb84bffb2fed4d283f456c28e5246.pdf\",\"bucket\":\"data\",\"mime_type\":\"application\\/pdf\"}', '{\"name\":\"Gmail - Terima Kasih! Pesanan (15864) diterima!.pdf\",\"filename\":\"1abaec505eb51e822fab9b4cc21c2edb.pdf\",\"bucket\":\"storage1\",\"mime_type\":\"application\\/pdf\"}', 'a', 'b', '[\"1\"]', '[\"2\"]', '4', '3', '2021-02-24', '2021-02-24', '2021-02-24', '2021-02-24 07:57:00', '1', 1, '1', '6', '2021-02-24 07:57:55', '2021-09-02 06:15:53'),
+(3, '{\"name\":\"5849972.jpeg\",\"filename\":\"28cf498e8e315ae6f9bbe165e5b37763.jpeg\",\"bucket\":\"storage\",\"mime_type\":\"image\\/jpeg\"}', 'Wahyu Taufik', 'Jakarta', '317503037930006', '{\"name\":\"0001.jpeg\",\"filename\":\"1719aa8b1b6cd90aa1781774b83cdb07.jpeg\",\"bucket\":\"data\",\"mime_type\":\"image\\/jpeg\"}', '{\"name\":\"5f1e3e8b7d508.jpeg\",\"filename\":\"405394c0f43b6f45f9d22f9e296f3507.jpeg\",\"bucket\":\"data\",\"mime_type\":\"image\\/jpeg\"}', 'a', 'a', '[\"2\"]', '[\"3\"]', NULL, NULL, '2021-09-01', '2021-08-31', NULL, NULL, '1', 1, '6', '6', '2021-09-01 19:01:37', '2021-09-01 20:22:29');
 
 -- --------------------------------------------------------
 
@@ -276,14 +269,47 @@ CREATE TABLE `user` (
   `_updated_by` varchar(255) DEFAULT NULL,
   `_created_time` datetime DEFAULT NULL,
   `_updated_time` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `photo`, `username`, `email`, `normalized_username`, `password`, `birthday`, `gender`, `address`, `mobile_phone`, `role`, `status`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
-(1, 'Admin', 'Ganteng', '{\"name\":\"logo-gigant-store.png\",\"filename\":\"098b16f2b114e681af0ad3894d7749c7.png\",\"bucket\":\"storage\",\"mime_type\":\"image\\/png\"}', 'admin', 'admin@m.io', NULL, '0fcfcbbb420d3b6f81cd5a0d70a96579', NULL, NULL, NULL, NULL, '[\"1\"]', 1, '1', '1', '2021-02-22 16:28:19', '2021-02-25 10:58:52');
+(1, 'Admin', 'Ganteng', '{\"name\":\"logo-gigant-store.png\",\"filename\":\"098b16f2b114e681af0ad3894d7749c7.png\",\"bucket\":\"storage\",\"mime_type\":\"image\\/png\"}', 'admin', 'admin@m.io', NULL, '0fcfcbbb420d3b6f81cd5a0d70a96579', NULL, NULL, NULL, NULL, '[\"1\",\"3\"]', 1, '1', '6', '2021-02-22 16:28:19', '2021-09-02 09:34:19'),
+(6, 'Wahyu', 'Taufik', '[]', 'wahyu', 'wahyutaufik37@gmail.com', NULL, '0fcfcbbb420d3b6f81cd5a0d70a96579', NULL, NULL, NULL, NULL, '[\"3\"]', 1, '1', '6', '2021-08-31 16:32:06', '2021-09-02 06:36:39'),
+(7, 'Abdul', 'Rasman', '{\"name\":\"photo_2021-08-21 07.07.57.jpeg\",\"filename\":\"3c59afd25147d0dfb14eca45b66abb7f.jpeg\",\"bucket\":\"storage\",\"mime_type\":\"image\\/jpeg\"}', 'adoel', 'adoel4razman@gmail.com', NULL, '0fcfcbbb420d3b6f81cd5a0d70a96579', NULL, NULL, NULL, NULL, NULL, 1, '1', '6', '2021-08-31 16:48:51', '2021-09-01 20:39:11'),
+(8, 'Apriyanto Pramana', 'Putra', '{\"name\":\"Screen Shot 2021-04-23 at 09.49.28.png\",\"filename\":\"ca0b0394757821a350f829df6e42e10a.png\",\"bucket\":\"storage\",\"mime_type\":\"image\\/png\"}', 'putra', 'putra@sagara.id', NULL, '0fcfcbbb420d3b6f81cd5a0d70a96579', NULL, NULL, NULL, NULL, '[\"2\"]', 1, '1', '6', '2021-08-31 16:49:19', '2021-09-02 06:36:22'),
+(9, 'Nur', 'Alam', '[]', 'alam', 'nur.alam@sagara.id', NULL, '0fcfcbbb420d3b6f81cd5a0d70a96579', NULL, NULL, NULL, NULL, '[\"2\"]', 1, '1', '6', '2021-09-01 05:32:04', '2021-09-02 06:37:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_roles`
+--
+
+CREATE TABLE `user_roles` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `role_id` int(11) DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
+  `_created_by` varchar(255) DEFAULT NULL,
+  `_updated_by` varchar(255) DEFAULT NULL,
+  `_created_time` datetime DEFAULT NULL,
+  `_updated_time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+--
+-- Dumping data for table `user_roles`
+--
+
+INSERT INTO `user_roles` (`id`, `user_id`, `role_id`, `status`, `_created_by`, `_updated_by`, `_created_time`, `_updated_time`) VALUES
+(17, 7, 2, NULL, '6', '6', '2021-09-01 20:39:11', '2021-09-01 20:39:11'),
+(19, 8, 2, NULL, '6', '6', '2021-09-02 06:36:22', '2021-09-02 06:36:22'),
+(20, 6, 3, NULL, '6', '6', '2021-09-02 06:36:39', '2021-09-02 06:36:39'),
+(22, 9, 2, NULL, '6', '6', '2021-09-02 06:37:12', '2021-09-02 06:37:12'),
+(23, 1, 1, NULL, '6', '6', '2021-09-02 09:34:19', '2021-09-02 09:34:19'),
+(24, 1, 3, NULL, '6', '6', '2021-09-02 09:34:19', '2021-09-02 09:34:19');
 
 --
 -- Indexes for dumped tables
@@ -332,6 +358,12 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_roles`
+--
+ALTER TABLE `user_roles`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -339,25 +371,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `audit_trail`
 --
 ALTER TABLE `audit_trail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `previleges`
 --
 ALTER TABLE `previleges`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `role`
 --
 ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `role_previleges`
 --
 ALTER TABLE `role_previleges`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `sysparam`
@@ -369,13 +401,19 @@ ALTER TABLE `sysparam`
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `user_roles`
+--
+ALTER TABLE `user_roles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

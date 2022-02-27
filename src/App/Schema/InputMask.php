@@ -42,7 +42,7 @@ class InputMask extends NormString{
             'entry' => $entry,
             'self' => $this,
             'mask' => $this['mask'],
-            'class' => implode($class," "),
+            'class' => implode(" ", $class),
         ));
     }
 
