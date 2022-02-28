@@ -1,11 +1,19 @@
 {
-    "name": "wahyutaufik/bono-metronic-v7",
-    "description": "Bono framework with metronic v7 theme",
+    "name": "xinix-technology/bono-metronic-tempmlate",
+    "description": "Bono framework with metronic  theme",
     "license": "MIT",
     "authors": [
         {
+            "name": "Xinix Technology",
+            "email": "hello@sagara.id"
+        },
+        {
             "name": "Wahyu Taufik",
             "email": "wahyutaufik37@gmail.com"
+        },
+        {
+            "name": "Januar Siregar",
+            "email": "januar.siregar@gmail.com"
         }
     ],
     "require": {
